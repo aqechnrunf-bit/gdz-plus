@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ГДЗ Плюс — решения для учёбы</title>
+<meta name="description" content="Учебный каталог ГДЗ Плюс для 1–11 классов. Выбирай класс, предмет и ищи задания.">
+<style>
+:root{--blue:#2455d6;--navy:#13244a;--sky:#edf3ff;--muted:#667085;--line:#e4eaf5;--yellow:#ffd45a}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:#f7f9fe;color:var(--navy)}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:3}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:15px 0}
+.brand{display:flex;align-items:center;gap:11px;font-weight:900;font-size:1.35rem;letter-spacing:-.5px}
+.logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(140deg,#2e6cff,#583de1);display:grid;place-items:center;color:white;font-size:24px;box-shadow:0 7px 18px #2455d633}
+.nav small{display:block;color:var(--muted);font-size:.72rem;font-weight:600;letter-spacing:0}
+.navlink{color:#38518a;font-weight:700;font-size:.92rem}
+.hero{padding:48px 0 32px;background:radial-gradient(ellipse at 85% 10%,#dbe6ff 0,transparent 38%),linear-gradient(120deg,#fff,#f0f5ff)}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid #d8e3ff;background:#fff;border-radius:99px;padding:7px 12px;color:var(--blue);font-weight:800;font-size:.82rem}
+h1{font-size:clamp(2.4rem,6vw,4.7rem);line-height:.99;letter-spacing:-2px;margin:18px 0}
+h1 span{color:var(--blue)}.lead{font-size:1.08rem;color:#566582;line-height:1.65;max-width:570px}
+.search{display:flex;gap:8px;background:white;padding:8px;border:1px solid #dce5f6;box-shadow:0 12px 35px #243f7912;border-radius:16px;margin-top:24px;max-width:610px}
+.search input{flex:1;min-width:0;border:0;outline:0;padding:12px;font:inherit}.btn{border:0;border-radius:12px;background:var(--blue);color:white;padding:13px 18px;font-weight:800;cursor:pointer}.btn:hover{filter:brightness(1.08)}
+.hero-art{min-height:270px;border-radius:28px;background:linear-gradient(145deg,#2455d6,#6d7dff);padding:26px;color:white;position:relative;overflow:hidden;box-shadow:0 20px 45px #2455d62b}
+.hero-art:before,.hero-art:after{content:"";position:absolute;border:1px solid #ffffff55;border-radius:50%;width:260px;height:260px;right:-55px;top:-70px}.hero-art:after{width:190px;height:190px;right:10px;top:5px}
+.art-title{position:relative;z-index:1;font-size:1.6rem;font-weight:900;max-width:220px}.book-stack{position:absolute;bottom:25px;left:24px;right:24px;display:grid;gap:8px;transform:rotate(-3deg)}.book{padding:12px 16px;border-radius:9px;color:#17315f;font-weight:900;background:#fff;box-shadow:0 5px 0 #d3dcf5}.book:nth-child(2){background:#d9f8e7}.book:nth-child(3){background:#ffe8a5}
+.stats{display:flex;gap:20px;flex-wrap:wrap;margin-top:24px;color:#566582;font-size:.9rem}.stats strong{color:var(--navy)}
+section{padding:38px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:20px}.section-head h2{margin:0;font-size:clamp(1.5rem,3vw,2rem);letter-spacing:-.7px}.section-head p{margin:6px 0 0;color:var(--muted)}
+.grades{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.grade{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 10px;text-align:center;font-weight:850;transition:.15s;cursor:pointer}.grade:hover,.grade.active{border-color:#8daaff;background:#eaf0ff;transform:translateY(-2px)}.grade span{display:block;color:var(--blue);font-size:1.35rem;margin-bottom:5px}
+.subjects{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.subject{background:white;border:1px solid var(--line);border-radius:18px;padding:18px;cursor:pointer;text-align:left;transition:.15s}.subject:hover{transform:translateY(-3px);box-shadow:0 12px 28px #172e6210;border-color:#b8c9f5}.subject .ico{width:44px;height:44px;border-radius:13px;background:var(--sky);display:grid;place-items:center;font-size:23px;margin-bottom:13px}.subject b{display:block;font-size:1rem}.subject small{display:block;color:var(--muted);margin-top:6px;line-height:1.45}
+.results{margin-top:22px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;display:none}.results.show{display:block}.results h3{margin-top:0}.result-row{padding:12px 0;border-top:1px solid var(--line);color:#42567e}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.step{background:#fff;border:1px solid var(--line);border-radius:17px;padding:20px}.num{width:34px;height:34px;border-radius:11px;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:900;margin-bottom:12px}
+footer{background:#101f43;color:#dbe5ff;padding:30px 0;margin-top:25px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot p{color:#aebce0;margin:7px 0}
+.notice{font-size:.84rem;color:var(--muted);line-height:1.55;margin-top:18px}
+@media(max-width:800px){.hero-grid{grid-template-columns:1fr}.hero-art{min-height:230px}.grades{grid-template-columns:repeat(3,1fr)}.subjects{grid-template-columns:repeat(2,1fr)}.how{grid-template-columns:1fr}.navlink{display:none}}
+@media(max-width:420px){.search{flex-direction:column}.search .btn{width:100%}.subjects{gap:9px}.subject{padding:14px}.section-head{align-items:start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+ <a class="brand" href="#"><span class="logo">✓</span><span>ГДЗ <span style="color:#2455d6">ПЛЮС</span><small>Решения для учёбы</small></span></a>
+ <a class="navlink" href="#classes">Классы</a><a class="navlink" href="#subjects">Предметы</a><a class="navlink" href="#how">Как пользоваться</a>
+</div></header>
+<main>
+<div class="hero"><div class="wrap hero-grid">
+ <div><div class="eyebrow">📚 Для 1–11 классов</div>
+ <h1>Учись сегодня.<br><span>Добивайся завтра.</span></h1>
+ <p class="lead">Удобный каталог школьных предметов и заданий. Выбери класс, найди предмет и добавь свои материалы — всё в одном месте.</p>
+ <form class="search" id="searchForm"><input id="searchInput" aria-label="Поиск" placeholder="Например: 7 класс, алгебра, номер задания"><button class="btn" type="submit">Найти →</button></form>
+ <div class="stats"><span>🔎 <strong>Быстрый поиск</strong></span><span>📖 <strong>Все предметы</strong></span><span>💡 <strong>Понятная структура</strong></span></div>
+ </div>
+ <div class="hero-art"><div class="art-title">Твой помощник в учёбе ✨</div><div class="book-stack"><div class="book">МАТЕМАТИКА</div><div class="book">РУССКИЙ ЯЗЫК</div><div class="book">ФИЗИКА · ИСТОРИЯ</div></div></div>
+</div></div>
+<section id="classes"><div class="wrap"><div class="section-head"><div><h2>Выбери свой класс</h2><p>Нажми на класс, чтобы начать поиск.</p></div></div><div class="grades" id="grades"></div></div></section>
+<section id="subjects"><div class="wrap"><div class="section-head"><div><h2>Популярные предметы</h2><p id="subjectSub">Выбери предмет, чтобы посмотреть, что можно добавить.</p></div></div><div class="subjects" id="subjectCards"></div><div class="results" id="results" aria-live="polite"></div><p class="notice">Это стартовый шаблон: каталог пока демонстрационный и не содержит готовой базы ответов. Добавляй собственные объяснения, ссылки на разрешённые материалы и задания, которыми имеешь право делиться.</p></div></section>
+<section id="how"><div class="wrap"><div class="section-head"><div><h2>Как пользоваться</h2><p>Три простых шага.</p></div></div><div class="how"><div class="step"><div class="num">1</div><b>Выбери класс</b><p class="notice">От 1 до 11 — выбери свой уровень.</p></div><div class="step"><div class="num">2</div><b>Открой предмет</b><p class="notice">Математика, русский язык и другие школьные предметы.</p></div><div class="step"><div class="num">3</div><b>Найди задание</b><p class="notice">Используй поиск по названию, учебнику или номеру задания, когда каталог будет заполнен.</p></div></div></div></section>
+</main>
+<footer><div class="wrap foot"><div><b>📘 ГДЗ Плюс</b><p>Учись, проверяй, понимай.</p></div><div><b>Для учеников 1–11 классов</b><p>Сделано как редактируемый стартовый шаблон.</p></div></div></footer>
+<script>
+const subjects=[
+ ["Математика","➗","Числа, примеры и задачи"],
+ ["Русский язык","📝","Правила, упражнения и разборы"],
+ ["Английский язык","🌍","Грамматика и лексика"],
+ ["Литература","📚","Произведения и вопросы"],
+ ["Алгебра","📈","Формулы и уравнения"],
+ ["Геометрия","📐","Фигуры и доказательства"],
+ ["Физика","⚛️","Законы и задачи"],
+ ["Химия","🧪","Реакции и формулы"],
+ ["Биология","🌿","Живая природа"],
+ ["История","🏛️","События и даты"],
+ ["География","🌎","Страны и карта"],
+ ["Информатика","💻","Алгоритмы и технологии"]
+];
+let selectedGrade=5;
+const grades=document.getElementById('grades');
+for(let i=1;i<=11;i++){const b=document.createElement('button');b.className='grade'+(i===5?' active':'');b.innerHTML='<span>'+i+'</span>класс';b.onclick=()=>{selectedGrade=i;document.querySelectorAll('.grade').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById('subjectSub').textContent='Выбран '+i+' класс. Теперь выбери предмет.';document.getElementById('results').classList.remove('show')};grades.appendChild(b)}
+const cards=document.getElementById('subjectCards');
+subjects.forEach(([name,ico,desc])=>{const b=document.createElement('button');b.className='subject';b.innerHTML='<span class="ico">'+ico+'</span><b>'+name+'</b><small>'+desc+'</small>';b.onclick=()=>showSubject(name);cards.appendChild(b)});
+function showSubject(name){const r=document.getElementById('results');r.classList.add('show');r.innerHTML='<h3>'+selectedGrade+' класс · '+name+'</h3><p>Здесь можно разместить учебники, номера заданий, свои решения и пояснения.</p><div class="result-row">📘 Учебник — добавь автора и название</div><div class="result-row">🔢 Номер задания — добавь условие и разбор</div><div class="result-row">💡 Объяснение — покажи шаги решения</div>';r.scrollIntoView({behavior:'smooth',block:'nearest'})}
+document.getElementById('searchForm').addEventListener('submit',e=>{e.preventDefault();const q=document.getElementById('searchInput').value.trim().toLowerCase();if(!q){document.getElementById('searchInput').focus();return}const found=subjects.filter(s=>s.join(' ').toLowerCase().includes(q));const r=document.getElementById('results');r.classList.add('show');r.innerHTML='<h3>Результаты поиска</h3><p>Запрос: <b>'+escapeHtml(q)+'</b></p>'+(found.length?found.map(s=>'<div class="result-row">📚 '+escapeHtml(s[0])+' — выбери предмет ниже для просмотра структуры.</div>').join(''):'<div class="result-row">Пока ничего не найдено. Попробуй название предмета или выбери класс ниже.</div>');r.scrollIntoView({behavior:'smooth',block:'nearest'})});
+function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+</script>
+</body></html>
